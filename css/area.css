@@ -1,0 +1,39 @@
+.cv-area {
+  padding-left: 38px; 
+  padding-bottom: 40px;
+}
+.cv-area:before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--PRIMARY);
+  border-radius: 50%;
+  position: absolute;
+  left: 12px;
+  top: 6px;
+}
+.cv-area:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  background-color: var(--PRIMARY);
+  position: absolute;
+  left: 20px;
+  top: 0;
+}
+.cv-area.none-point:before {
+  display: none;
+}
+.cv-area:last-child {
+  flex: 1;
+}
+.cv-area .title {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--PRIMARY);
+}

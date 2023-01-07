@@ -1,0 +1,23 @@
+.page {
+  width: 21cm;
+  height: 29.7cm;
+  background-color: var(--WHITE);
+  transform: scale(0.6);
+  transform-origin: left center;
+  box-shadow: 5px 5px 15px 0px #00000030;
+}
+.page .bg {
+  opacity: 0.2;
+}
+.page .content {
+  left: 0;
+  top: 0;
+  padding: 0 24px;
+}
+.page .page-no {
+  right: 10px;
+  bottom: 10px;
+}
+.page .page-no p {
+  font-size: 10px;
+}

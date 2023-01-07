@@ -1,0 +1,99 @@
+@import url('./area.css');
+@import url('./page.css');
+@import url('./page-1.css');
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container .wrap {
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+
+.container .wrap .item {
+  width: 476px;
+}
+
+.container .wrap .item:nth-of-type(1) {
+  transform: translateX(0);
+}
+.container .wrap .item:nth-of-type(2) {
+  transform: translateX(0);
+}
+
+.career .company {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.career .date {
+  font-size: 16px;
+}
+.career .skills,
+.career .contents {
+  gap: 10px;
+  font-size: 16px;
+}
+.description {
+  margin-top: 20px;
+  border: 1px solid var(--DARK);
+  padding: 10px;
+  border-radius: 5px;
+  gap: 5px;
+}
+.description p {
+  font-size: 16px;
+  line-height: 22px;
+  text-indent: 3px;
+}
+
+
+@media print {
+  @page {
+    size: 21cm 29.7cm;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .print-hide {
+    display:none;
+  }
+  .container {
+    overflow: visible;
+  }
+  .container .wrap {
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 0;
+  }
+  .container .wrap .item {
+    width: auto;
+    page-break-before: always;
+    overflow: visible;
+  }
+  .container .wrap .item .page {
+    overflow: hidden;
+    transform: scale(1);
+    box-shadow: none;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}

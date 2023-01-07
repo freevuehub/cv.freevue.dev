@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/root.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/main.css">
+  
+  <script src="https://kit.fontawesome.com/6d830ab441.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+  <script src="./js/constant.js"></script>
+  <script src="./js/wc.js"></script>
+  <script src="./components/Name.js"></script>
+  <script src="./components/Area.js"></script>
+  <script src="./components/EducationItem.js"></script>
+  <script src="./components/ExperienceItem.js"></script>
+  <script src="./components/CareerItem.js"></script>
+  <script src="./components/EducationList.js"></script>
+  <script src="./components/ExperienceList.js"></script>
+  <script src="./components/CareerList.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="container flex fill height">
+      <div class="wrap flex fill height width">
+        <div class="relative item">
+          <div class="page relative" id="page1">
+            <img class="block bg fill width" src="./images/bg.png" alt="">
+            <div class="content absolute flex fill width height">
+              <div class="left flex dir-column">
+                <div class="profile">
+                  <div class="thumb flex fill width height">
+                    <img class="block fill width" src="https://file.freevue.dev/cv/profile.jpg" alt="">
+                  </div>
+                </div>
+                <my-name class="name cv-area relative">
+                </my-name>
+                <cv-area class="cv-area relative" title="contact">
+                  <ul class="contact flex dir-column" slot="aa">
+                    <li>
+                      <p class="flex ai-center">
+                        <span class="icon">
+                          <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span>010-7764-0887</span>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="flex ai-center">
+                        <span class="icon">
+                          <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <span>Seoul, Republic of Korea</span>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="flex ai-center">
+                        <span class="icon">
+                          <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <span>hackish113@gmail.com</span>
+                      </p>
+                    </li>
+                  </ul>
+                </cv-area>
+                <cv-area class="cv-area relative" title="references">
+                  <ul class="references flex dir-column">
+                    <li>
+                      <i class="fa-brands fa-github"></i>
+                      <p>https://github.com/freevuehub</p>
+                    </li>
+                    <li>
+                      <p class="flex ai-center">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>https://www.linkedin.com/in/성준-홍-6bb854171</p>
+                      </p>
+                    </li>
+                  </ul>
+                </cv-area>
+              </div>
+              <div class="right flex dir-column">
+                <cv-area class="cv-area relative none-point"></cv-area>
+                <cv-area class="cv-area relative" title="education">
+                  <cv-education-list></cv-education-list>
+                </cv-area>
+                <cv-area class="cv-area relative" title="experience">
+                  <cv-experience-list></cv-experience-list>
+                </cv-area>
+                <cv-area class="cv-area relative" title="skill">
+                  <ul class="skill flex dir-column">
+                    <li>
+                      Javascript, Typescript
+                    </li>
+                    <li>
+                      Next.js, React.js
+                    </li>
+                    <li>
+                      Nuxt.js, Vue.js
+                    </li>
+                  </ul>
+                </cv-area>
+              </div>
+            </div>
+            <div class="page-no absolute">
+              <p>Page 1</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative item">
+          <div class="page relative">
+            <img class="block bg fill width" src="./images/bg.png" alt="">
+            <cv-career-list page="0"></cv-career-list>
+            <div class="page-no absolute">
+              <p>Page 2</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative item">
+          <div class="page relative">
+            <img class="block bg fill width" src="./images/bg.png" alt="">
+            <cv-career-list page="1"></cv-career-list>
+            <div class="page-no absolute">
+              <p>Page 3</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative item">
+          <div class="page relative">
+            <img class="block bg fill width" src="./images/bg.png" alt="">
+            <cv-career-list page="2"></cv-career-list>
+            <div class="page-no absolute">
+              <p>Page 4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button class="pdf">PDF Download</button> -->
+  </div>
+
+  <script>
+    function saveAs(uri, fileName) {
+      const link = document.createElement("a");
+
+      link.href = uri;
+      link.download = fileName;
+
+      document.body.appendChild(link);
+
+      link.click();
+
+      document.body.removeChild(link);
+    }
+
+    document.querySelector('.pdf').addEventListener('click', (event) => {
+      event.preventDefault()
+
+      html2canvas(document.querySelector(".container")).then(canvas => {
+        console.dir(canvas)
+
+        document.querySelector("#app").appendChild(canvas)
+
+          saveAs(canvas.toDataURL(), 'fileName.png')
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.ai-center {
+  align-items: center;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.dir-column {
+  flex-direction: column;
+}
+
+.ft-pd {
+  font-family: "Pretendard", Arial, Helvetica, sans-serif;
+}
+
+.fill.width {
+  width: 100%;
+}
+.fill.height {
+  height: 100%;
+}
