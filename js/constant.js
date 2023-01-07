@@ -63,7 +63,7 @@ const CAREER_LIST = [
       key: 'drx',
       title: '게임 전적 사이트 개발',
       skill: [
-        'Next.js', 'Typescript', 'Emotion'
+        'Next.js', 'Typescript', 'Emotion', 'GraphQL', 'Deno'
       ],
       date: '2022-10',
       content: [
@@ -149,7 +149,12 @@ const CAREER_LIST = [
       title: 'Dr.Law 개발',
       date: '2019-09',
       skill: ['Nuxt.js', 'Typescript', 'composition-api'],
-      content: ['LoL Draft 기능 제공', '실시간 채팅 제공'],
+      content: [
+        '법률 검색 기능 개발',
+        '소송 비용 계산기 개발',
+        '즐겨찾기 기능 개발',
+        '메인 페이지 대시 보드 개발',
+      ],
       description: [
         `
           변호사들이 업무에 사용하는 서류들을 사이트에 구현하는 서비스였습니다.
