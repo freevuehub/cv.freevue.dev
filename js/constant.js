@@ -15,6 +15,7 @@ const EDUCATION_LIST = [
     school: '고양일고등학교',
     term: '2009.03 - 2012.02',
     major: '인문계열',
+    credit: '-',
   }
 ]
 
