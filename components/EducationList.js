@@ -10,7 +10,7 @@ class EducationList extends WC {
                   school="${item.school}"
                   term="${item.term}"
                   major="${item.major}"
-                  credit="3.71 / 4.5"
+                  credit="${item.credit}"
                 ></cv-education-item>
               </li>
             `)
