@@ -61,7 +61,7 @@ const CAREER_LIST = [
   [
     {
       key: 'drx',
-      title: '게임 전적 사이트 개발',
+      title: 'WASD',
       skill: [
         'Next.js', 'Typescript', 'Emotion', 'GraphQL', 'Deno'
       ],
