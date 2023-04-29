@@ -99,13 +99,16 @@
                 <cv-area class="cv-area relative" title="skill">
                   <ul class="skill flex dir-column">
                     <li>
-                      Javascript, Typescript
+                      Javascript, Typescript, (Python)
                     </li>
                     <li>
                       Next.js, React.js
                     </li>
                     <li>
                       Nuxt.js, Vue.js
+                    </li>
+                    <li>
+                      Deno, (Tensorflow)
                     </li>
                   </ul>
                 </cv-area>
@@ -143,6 +146,15 @@
             </div>
           </div>
         </div>
+        <div class="relative item">
+          <div class="page relative">
+            <img class="block bg fill width" src="./images/bg.png" alt="">
+            <cv-career-list page="3"></cv-career-list>
+            <div class="page-no absolute">
+              <p>Page 5</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -150,6 +162,33 @@
   </div>
 
   <script>
+    document.addEventListener('wheel', (event) => {
+      document.querySelector('.container .wrap').scrollTo({
+        left: document.querySelector('.container .wrap').scrollLeft - event.wheelDelta
+      })
+    })
+    
+    const page = document.querySelectorAll('.page')
+
+    document.addEventListener('click', () => {
+      page.forEach((dom) => {
+        dom.classList.remove('on')
+      })
+    })
+
+    page.forEach((dom) => {
+      dom.addEventListener('click', (event) => {
+        event.preventDefault()
+        event.stopPropagation()
+        
+        page.forEach((dom) => {
+          dom.classList.remove('on')
+        })
+        
+        event.currentTarget.classList.add('on')
+      })
+    })
+
     function saveAs(uri, fileName) {
       const link = document.createElement("a");
 
@@ -163,15 +202,13 @@
       document.body.removeChild(link);
     }
 
-    document.querySelector('.pdf').addEventListener('click', (event) => {
+    document.querySelector('.pdf')?.addEventListener('click', (event) => {
       event.preventDefault()
 
       html2canvas(document.querySelector(".container")).then(canvas => {
-        console.dir(canvas)
-
         document.querySelector("#app").appendChild(canvas)
 
-          saveAs(canvas.toDataURL(), 'fileName.png')
+        saveAs(canvas.toDataURL(), 'fileName.png')
       })
     })
   </script>

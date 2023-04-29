@@ -62,6 +62,40 @@ const CAREER_LIST = [
   [
     {
       key: 'drx',
+      title: 'AI Chatbot 개발',
+      skill: [
+        'GPT', 'Node'
+      ],
+      date: '2023-03',
+      content: [
+        'Slack 서버에 Chatbot 추가',
+        'GPT 모델을 이용'
+      ],
+      description: [
+        `
+          사내에서 사용하는 Slack에 GPT 3.5 모델을 이용한 Chatbot을 추가했습니다.
+          OpenAI에서 제공하는 API를 활용했으며, Fine-Tuning을 이용하여 부족한 데이터와 사내에서 사용하는 정보를 입력하고 있습니다.
+        `
+      ]
+    },
+    {
+      key: 'drx',
+      title: 'DRX Wrolds 우승 기념 사이트 개발',
+      date: '2022-12',
+      skill: ['Web Component'],
+      content: [
+        '스크롤을 이용한 인터넥티브한 경험 제공'
+      ],
+      description: [
+        `
+          2022년 Worlds에서 우승한 DRX를 기념하는 사이트를 개발했습니다.
+          2022년 한해 DRX의 드라마 같은 스토리를 담았으며,
+          스크롤을 이용한 인터렉티브한 경험을 제공하고 있습니다.
+        `
+      ]
+    },
+    {
+      key: 'drx',
       title: 'WASD',
       skill: [
         'Next.js', 'Typescript', 'Emotion', 'GraphQL', 'Deno'
@@ -79,6 +113,8 @@ const CAREER_LIST = [
         `
       ]
     },
+  ],
+  [
     {
       key: 'drx',
       title: 'DRX 사이트 개발',
@@ -105,9 +141,7 @@ const CAREER_LIST = [
           그렇게 낭비되는 시간을 아끼기 위해 사이트에서 먼저 챔피언을 선택할 수 있는 기능을 제공했습니다.
         `
       ]
-    }
-  ],
-  [
+    },
     {
       key: 'rsupport',
       title: 'Remote Meeting 개발 및 솔루션 납품',
@@ -132,6 +166,8 @@ const CAREER_LIST = [
         `
       ]
     },
+  ],
+  [
     {
       key: 'petFriends',
       title: '펫프렌즈 리뉴얼 개발',
@@ -163,9 +199,7 @@ const CAREER_LIST = [
           하지만 회사가 힘들어져 서비스를 런칭하지 못했습니다.
         `
       ]
-    }
-  ],
-  [
+    },
     {
       key: 'bemycar',
       title: '뿅카 개발',
@@ -179,6 +213,8 @@ const CAREER_LIST = [
         `
       ]
     },
+  ],
+  [
     {
       key: 'bemycar',
       title: 'IMS 렌트카 관리 플랫폼 개발',

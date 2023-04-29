@@ -4,8 +4,6 @@ class CareerItem extends WC {
   }
 
   render(props) {
-
-    console.dir(this)
     const skillList = props.skill
       .split(',')
       .map((skill) => `<li>${skill.trim()}</li>`)
