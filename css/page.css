@@ -7,7 +7,7 @@
   height: 29.7cm;
   min-width: 21cm;
   min-height: 29.7cm;
-  transform: scale(0.6) translateX(-25%);
+  transform: scale(0.6) translate(-25%, 0);
   cursor: pointer;
 }
 .page .bg {

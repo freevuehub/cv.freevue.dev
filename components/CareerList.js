@@ -12,7 +12,7 @@ class CareerList extends WC {
             .map((item) => `
               <cv-area class="cv-area relative" title="${item.title}">
                 <cv-career-item
-                  company="${EXPERIENCE_LIST[item.key].company}"
+                  company="${EXPERIENCE_LIST[item.key]?.company || item.key}"
                   class="career"
                   skill="${item.skill.join(',')}"
                   date="${item.date}"

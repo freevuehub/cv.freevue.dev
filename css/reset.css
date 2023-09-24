@@ -19,3 +19,7 @@ ul, ol {
 p {
   color: inherit;
 }
+
+a {
+  text-decoration: none;
+}

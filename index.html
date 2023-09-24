@@ -45,7 +45,7 @@
                 </div>
                 <my-name class="name cv-area relative">
                 </my-name>
-                <cv-area class="cv-area relative" title="contact">
+                <cv-area class="cv-area relative" title="연락처">
                   <ul class="contact flex dir-column" slot="aa">
                     <li>
                       <p class="flex ai-center">
@@ -73,30 +73,44 @@
                     </li>
                   </ul>
                 </cv-area>
-                <cv-area class="cv-area relative" title="references">
+                <cv-area class="cv-area relative" title="SNS">
                   <ul class="references flex dir-column">
+										<li>
+											<i class="fa-solid fa-window-maximize"></i>
+											<p>
+												<a href="https://freevue.dev" target="_blank">https://freevue.dev</a>
+											</p>
+										</li>
                     <li>
                       <i class="fa-brands fa-github"></i>
-                      <p>https://github.com/freevuehub</p>
+                      <p>
+												<a href="https://github.com/freevuehub" target="_blank">https://github.com/freevuehub</a>
+											</p>
                     </li>
                     <li>
-                      <p class="flex ai-center">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <p>https://www.linkedin.com/in/성준-홍-6bb854171</p>
-                      </p>
+											<i class="fa-brands fa-linkedin"></i>
+											<p>
+												<a href="https://www.linkedin.com/in/성준-홍-6bb854171" target="_blank">https://www.linkedin.com/in/성준-홍-6bb854171</a>
+											</p>
+                    </li>
+                    <li>
+											<i class="fa-brands fa-square-x-twitter"></i>
+											<p>
+												<a href="https://twitter.com/freevuehub" target="_blank">https://twitter.com/freevuehub</a>
+											</p>
                     </li>
                   </ul>
                 </cv-area>
               </div>
               <div class="right flex dir-column">
                 <cv-area class="cv-area relative none-point"></cv-area>
-                <cv-area class="cv-area relative" title="education">
+                <cv-area class="cv-area relative" title="학력">
                   <cv-education-list></cv-education-list>
                 </cv-area>
-                <cv-area class="cv-area relative" title="experience">
+                <cv-area class="cv-area relative" title="경력">
                   <cv-experience-list></cv-experience-list>
                 </cv-area>
-                <cv-area class="cv-area relative" title="skill">
+                <cv-area class="cv-area relative" title="언어 및 기술">
                   <ul class="skill flex dir-column">
                     <li>
                       Javascript, Typescript, (Python)
@@ -155,6 +169,15 @@
             </div>
           </div>
         </div>
+				<div class="relative item">
+					<div class="page relative">
+						<img class="block bg fill width" src="./images/bg.png" alt="">
+						<cv-career-list page="4"></cv-career-list>
+						<div class="page-no absolute">
+							<p>Page 6</p>
+						</div>
+					</div>
+				</div>
       </div>
     </div>
 
@@ -175,6 +198,14 @@
         dom.classList.remove('on')
       })
     })
+
+		document.querySelectorAll('.references a').forEach((dom) => {
+			dom.addEventListener('click', (event) => {
+				if (document.querySelector('#page1').classList.value.includes('on')) {
+					event.stopPropagation()
+				}
+			})
+		})
 
     page.forEach((dom) => {
       dom.addEventListener('click', (event) => {
