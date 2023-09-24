@@ -86,31 +86,11 @@ const CAREER_LIST = [
     },
     {
       key: 'drx',
-      title: 'AI Chatbot',
-      skill: [
-        'OpenAI', 'Node'
-      ],
-      date: '2023-03',
-      content: [
-        'Chatbot'
-      ],
-      description: [
-        `사내에서 사용하는 Slack에 AI Chat을 추가했습니다.`,
-        `
-          답변의 정확도를 올리기 위해 노력했습니다. 프롬프트들을 사전에 엑셀에 정리하여 입력했습니다.
-          쓰레드를 이용한 대화의 경우 이전에 대화들을 추가로 담아 답변의 정확도를 올리고자 했습니다. 
-        `
-      ]
-    },
-  ],
-  [
-    {
-      key: 'drx',
       title: 'WASD',
       skill: [
         'Next.js', 'Typescript', 'Emotion', 'GraphQL', 'Deno'
       ],
-      date: '2022-10',
+      date: '2023-03',
       content: [
         '게임 전적 검색',
         '게임 데이터 분석'
@@ -127,6 +107,26 @@ const CAREER_LIST = [
         `
       ]
     },
+  ],
+  [
+    {
+      key: 'drx',
+      title: 'AI Chatbot',
+      skill: [
+        'OpenAI', 'Node'
+      ],
+      date: '2023-03',
+      content: [
+        'Chatbot'
+      ],
+      description: [
+        `사내에서 사용하는 Slack에 AI Chat을 추가했습니다.`,
+        `
+          답변의 정확도를 올리기 위해 노력했습니다. 프롬프트들을 사전에 엑셀에 정리하여 입력했습니다.
+          쓰레드를 이용한 대화의 경우 이전에 대화들을 추가로 담아 답변의 정확도를 올리고자 했습니다. 
+        `
+      ]
+    },
     {
       key: 'drx',
       title: 'DRX 사이트',
@@ -140,8 +140,6 @@ const CAREER_LIST = [
         `
       ]
     },
-  ],
-  [
     {
       key: 'drx',
       title: 'BnP',
@@ -154,27 +152,6 @@ const CAREER_LIST = [
           소켓을 이용해 실시간 데이터를 공유하며 반영되게 했습니다.
           그런데 선택할 수 있는 사용자를 특정하기가 쉽지 않았습니다.
           이를 특정하기 위해 RTC도입, 캔버스를 이용한 브라우저 특정등 방법을 고민했습니다.
-        `
-      ]
-    },
-    {
-      key: 'rsupport',
-      title: 'RVS',
-      skill: [
-        'React.js',
-        'WebRTC'
-      ],
-      date: '2020-08',
-      content: [
-        ''
-      ],
-      description: [
-        '비대면 상담 및 서비스 툴입니다.',
-        `
-          해당 프로젝트에는 MSA 프론트엔드가 적용되어 있었습니다.
-          각 페이지를 MSA로 묶인 상태라 유지 보수 및 개발이 매우 어려웠습니다.
-          페이지간 상태를 공유하기 위해 Window를 사용하였고, 컴포넌트끼리 소통도 RTC 통신과 엉키면서 매우 힘든 상황이었습니다.
-          최대한 컴포넌트간 소통을 우선적으로 풀면서, 함수 컴포넌트 도입 및 Hooks를 활용하면서 개발을 진행했습니다.
         `
       ]
     },
@@ -200,6 +177,27 @@ const CAREER_LIST = [
       ]
     },
     {
+      key: 'rsupport',
+      title: 'RVS',
+      skill: [
+        'React.js',
+        'WebRTC'
+      ],
+      date: '2020-08',
+      content: [
+        ''
+      ],
+      description: [
+        '비대면 상담 및 서비스 툴입니다.',
+        `
+          해당 프로젝트에는 MSA 프론트엔드가 적용되어 있었습니다.
+          각 페이지를 MSA로 묶인 상태라 유지 보수 및 개발이 매우 어려웠습니다.
+          페이지간 상태를 공유하기 위해 Window를 사용하였고, 컴포넌트끼리 소통도 RTC 통신과 엉키면서 매우 힘든 상황이었습니다.
+          최대한 컴포넌트간 소통을 우선적으로 풀면서, 함수 컴포넌트 도입 및 Hooks를 활용하면서 개발을 진행했습니다.
+        `
+      ]
+    },
+    {
       key: 'petFriends',
       title: '펫프렌즈',
       date: '2019-12',
@@ -212,6 +210,8 @@ const CAREER_LIST = [
         `
       ]
     },
+  ],
+  [
     {
       key: 'jjsoft',
       title: 'Dr.Law',
@@ -231,8 +231,6 @@ const CAREER_LIST = [
         `
       ]
     },
-  ],
-  [
     {
       key: 'bemycar',
       title: '뿅카',
