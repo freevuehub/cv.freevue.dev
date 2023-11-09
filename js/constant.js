@@ -1,7 +1,7 @@
 const EDUCATION_LIST = [
   {
     school: '고려사이버대학교',
-    term: '2019.01 - 2021.08',
+    term: '2019.08 - 2021.08',
     major: '소프트웨어공학과',
     credit: '3.71 / 4.5',
   },
