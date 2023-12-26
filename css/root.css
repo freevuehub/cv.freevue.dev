@@ -1,6 +1,13 @@
 :root {
   --WHITE: #ffffff;
   --DARK: #3F3F3F;
-  --PRIMARY: rgb(187, 38, 73);
-  --PRIMARY-50: rgba(187, 38, 73, 0.5);
+  /***/
+  /**
+  * 2023년
+  * --PRIMARY: rgb(187, 38, 73);
+  * --PRIMARY-50: rgba(187, 38, 73, 0.5);
+  */
+
+  --PRIMARY: rgb(255, 190, 152);
+  --PRIMARY-50: rgba(255, 190, 152, 0.5);
 }
