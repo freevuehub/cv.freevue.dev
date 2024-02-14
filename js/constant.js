@@ -20,6 +20,12 @@ const EDUCATION_LIST = [
 ]
 
 const EXPERIENCE_LIST = {
+  millie: {
+    company: '밀리의 서재',
+    term: '2024.01.22 - ',
+    position: '사원',
+    job: '프론트엔드 개발자',
+  },
   drx: {
     company: 'DRX',
     term: '2021.01.15 - 2023.09.22',
