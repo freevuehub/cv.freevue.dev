@@ -67,6 +67,27 @@ const EXPERIENCE_LIST = {
 const CAREER_LIST = [
   [
     {
+      key: 'millie',
+      title: '전자책 뷰어 관리',
+      skill: [
+        'Typescript', 'monorepo'
+      ],
+      date: '2024-01',
+      content: [
+        '영문 TTS 개발',
+        '버그 수정 및 유지보수',
+      ],
+      description: [
+        `밀리의 서재의 메인 서비스인 전자책을 서빙하는 툴입니다.`,
+        `
+          단순히 전자책을 열어 데이터화하는 것이 아니라 사용자의 경험과 App의 인터페이스에 따라 전자책을 렌더링해줍니다.
+          그 밖에 다른 서비스와 전자책간 연동하는 여러 메소드들을 관리하고 있습니다.
+        `
+      ]
+    },
+  ],
+  [ 
+    {
       key: 'Waktaverse Games',
       title: 'Waktaverse Games',
       skill: [
